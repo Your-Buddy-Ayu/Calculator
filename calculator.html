@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator by ayu</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-transform: capitalize;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(140deg, rgb(178, 120, 178), rgb(152, 214, 255));
+        }
+
+        .container {
+            width: 25%;
+            height: 70%;
+            box-shadow: 0px 0px 20px 0px #757474;
+            padding: 11px 17px;
+            border-radius: 1rem;
+        }
+
+        input {
+            height: 60px;
+            width: 100%;
+            font-size: 36px;
+        }
+
+        .calculator {
+            display: grid;
+            height: 80%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 5px;
+            margin-top: 12px;
+        }
+
+        button {
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <input id="inp" type="text" placeholder="0123456789" disabled>
+        </div>
+        <div class="calculator">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>*</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+            <button>/</button>
+        </div>
+    </div>
+    <script>
+        let inp = document.getElementById("inp")
+        let setted = "";
+        window.addEventListener("keypress", (e) => {
+            if (e.key !== "Enter") {
+                setted += e.key
+                inp.setAttribute("value", setted)
+            }
+            if (e.key === "Enter") {
+                let ayu = eval(setted)
+                inp.setAttribute("value", ayu)
+            }
+        })
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "Backspace") {
+                setted = setted.slice(0, setted.length - 1)
+                inp.setAttribute("value", setted)
+            }
+        })
+    </script>
+</body>
+
+</html>

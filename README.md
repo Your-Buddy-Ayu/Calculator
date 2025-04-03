@@ -8,31 +8,8 @@ A powerful and easy-to-use **Number Calculator** that performs basic and advance
 - Basic operations: Addition, Subtraction, Multiplication, Division
 - Advanced functions: Square root, Exponents, Modulus
 - User-friendly interface
-- Built using [mention your tech stack, e.g., Python, JavaScript, React, etc.]
+- Built using HTML,css,javascript
 
-## Installation
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/number-calculator.git
-   ```
-2. Navigate to the project folder:
-   ```sh
-   cd number-calculator
-   ```
-3. Install dependencies (if applicable):
-   ```sh
-   npm install  # For JavaScript/React projects
-   pip install -r requirements.txt  # For Python projects
-   ```
-
-## Usage
-
-Run the application using:
-```sh
-npm start  # For JavaScript/React projects
-python app.py  # For Python projects
-```
 
 Enter numbers and select the operation to get instant results!
 
